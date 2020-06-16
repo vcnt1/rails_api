@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2020-06-16
+  tipo: MyString
+  descricao: MyText
+  valor: 9.99
+
+two:
+  data: 2020-06-16
+  tipo: MyString
+  descricao: MyText
+  valor: 9.99

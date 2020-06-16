@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Newproject</title>
+    <%= csrf_meta_tags %>
+
+	<%= stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<nav class="site-header sticky-top py-1 bg-dark">
+	  <div class="container d-flex flex-column flex-md-row justify-content-between">
+	    <a class="py-2" href="#" aria-label="NewProject">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>NewProject</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+	    </a>
+	    <a class="py-2 d-none d-md-inline-block text-white" href="#">Home</a>
+	    <a class="py-2 d-none d-md-inline-block text-white" href="# ">Gerenciar Produtos</a>
+	    <a class="py-2 d-none d-md-inline-block text-white" href="#">Movimentações</a>
+	    <a class="py-2 d-none d-md-inline-block text-white" href="#">Peça dinheiro</a>
+	    <div class="my-2 px-3 d-none d-md-inline-block text-dark bg-white font-weight-bold">Seu saldo: R$ 100,00</div>
+	  </div>
+	</nav>
+
+	<div class="ml-5 mr-5 mt-3">
+    	<%= yield %>
+	</div>
+  </body>
+</html>
