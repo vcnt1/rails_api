@@ -1,3 +1,3 @@
 class Movimentacao < ApplicationRecord
-	belongs_to :produtos
+	belongs_to :produto
 end

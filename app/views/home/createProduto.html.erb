@@ -1,0 +1,17 @@
+<h3>Adicionar Produto</h3>
+
+<div class="w-25">
+	<%= form_with(url: "/produtos", method: "post", class: "d-flex flex-column") do %>
+	  <%= csrf_meta_tags %>
+	  <%= label_tag(:nome, "Nome:") %>
+	  <%= text_field_tag(:nome, '', class: "form-control mb-3") %>
+	  <%= label_tag(:descricao, "Descrição:") %>
+	  <%= text_field_tag(:descricao, '', class: "form-control mb-3") %>
+	  <%= label_tag(:preco, "Preço:") %>
+	  <%= number_field_tag(:preco, '', step: :any, class: "form-control mb-3") %>
+	  <%= label_tag(:quantidade, "Quantidade:") %>
+	  <%= number_field_tag(:quantidade, '', step: 1, class: "form-control mb-3") %>
+	<%= submit_tag("Criar Produto", class: "btn btn-dark") %>
+</div>
+
+<% end %>
