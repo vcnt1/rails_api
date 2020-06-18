@@ -1,0 +1,9 @@
+<div class="d-flex">
+	<h3>Movimentações</h3>
+</div>
+
+<% @movimentacaos.each do |movimentacao| %>
+	<div class="mt-4 text-white" style=" width: 20%; background-color: #444e59; overflow: auto">
+		<%= movimentacao.descricao %>
+	</div>
+<% end %>
