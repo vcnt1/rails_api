@@ -21,4 +21,16 @@ class ProdutosController < ApplicationController
 	def produto_params
 	  params.permit(:nome, :descricao, :preco, :quantidade)
 	end
+
+	def update
+		@produto = Produto.find(params[:id])
+
+		if @produto.update(produto_params)
+			redirect_to '/produtos'
+		end
+	end
+
+	def comprar
+
+	end
 end

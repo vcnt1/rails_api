@@ -3,19 +3,18 @@
 	<%= link_to "Adicionar Produto", '/home/create_produto', method: :get, class: "ml-3 btn btn-outline-dark" %>
 </div>
 
-<% @produtos.each do |produtos| %>
+<% @produtos.each do |produto| %>
 	<div class="mt-4 text-white" style=" width: 15%; background-color: #444e59; overflow: auto">
 		<div class="p-3">
 			 <div class="d-flex justify-content-between">
-			    <h4><%= produtos.nome %></h4>
-			    <h5 class="mt-1">R$ <%= produtos.preco %></h5>
+			    <h4><%= produto.nome %></h4>
+			    <h5 class="mt-1">R$ <%= produto.preco %></h5>
 			 </div>
-			 <h6><%= produtos.descricao %></h6>
-			 <h6 class="float-right">x<%= produtos.quantidade %></h6>
+			 <h6><%= produto.descricao %></h6>
+			 <h6 class="float-right">x<%= produto.quantidade %></h6>
 		
 			<div class="mt-5 d-flex justify-content-between">
-				<%= link_to "Editar", '/home/create_produto', method: :get, class: "btn btn-light" %>
-				<%= link_to "Comprar", '/home/create_produto', method: :get, class: "btn btn-success" %>
+				<%= link_to "Editar", '/home/update_produto/' + produto.id.to_s, method: :get, class: "btn btn-outline-light" %>
 			</div>
 		</div>
 	</div>

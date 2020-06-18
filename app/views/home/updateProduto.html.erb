@@ -1,0 +1,17 @@
+<h3>Editar Produto</h3>
+
+
+<div class="w-25">
+	<%= form_with(url: '/produtos/' + @produto.id.to_s, method: :patch, class: "d-flex flex-column") do %>
+	  <%= label_tag(:nome, "Nome:") %>
+	  <%= text_field_tag(:nome, @produto.nome, class: "form-control mb-3") %>
+	  <%= label_tag(:descricao, "Descrição:") %>
+	  <%= text_field_tag(:descricao, @produto.descricao, class: "form-control mb-3") %>
+	  <%= label_tag(:preco, "Preço:") %>
+	  <%= number_field_tag(:preco, @produto.preco, step: :any, class: "form-control mb-3") %>
+	  <%= label_tag(:quantidade, "Quantidade:") %>
+	  <%= number_field_tag(:quantidade, @produto.quantidade, step: 1, class: "form-control mb-3") %>
+	<%= submit_tag("Editar", class: "btn btn-dark") %>
+</div>
+
+<% end %>
