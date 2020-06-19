@@ -28,7 +28,10 @@ class ProdutosController < ApplicationController
 	end
 
 	def comprar
+
 		@produto = Produto.find(params[:id])
+
+		@user.update_column(:saldo, @user.saldo - @produto.preco)
 
 		if @produto.quantidade - 1 > 0 
 			@movimentacao = Movimentacao.create(data: Date.today, tipo: 'Compra', descricao: 'Produto comprado, quantidade restante: '+ (@produto.quantidade-1).to_s, valor: @produto.preco, produto_id: @produto.id) 

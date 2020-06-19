@@ -1,0 +1,10 @@
+<div class="h-50"> </div>
+<div class="w-50" style="margin: 0 auto">
+	<h1>Pegue dinheiro aqui!</h1>
+	<%= form_with(url: "/home/user_add_saldo", method: "post", class: "d-flex flex-column") do %>
+	  <%= label_tag(:valor, "Valor:") %>
+	  <%= number_field_tag(:valor, '100.0', class: "form-control mb-3") %>
+	<%= submit_tag("Confirmar", class: "btn btn-dark") %>
+</div>
+
+<% end %>
