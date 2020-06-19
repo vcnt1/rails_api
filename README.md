@@ -2,7 +2,15 @@
 
 Aplicação de estudo - Ruby on Rails API
 
-Things you may want to cover:
+Essa aplicação possui uma interface básica de compra de produtos, possuindo:
+	- Compra de produtos com saldo do usuario.
+	- Adição de produto
+	- Edição de produto (Ta dando erro de rota não sei o porquê)
+	- Adição de saldo no usuário
+	- Listagem de movimentações de produtos (criação, compra e edição)
+
+
+---------------------------------------------------------------------------------
 
 * Ruby 2.3.3
 
