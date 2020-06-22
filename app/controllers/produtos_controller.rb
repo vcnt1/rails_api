@@ -29,7 +29,7 @@ class ProdutosController < ApplicationController
 
 	def comprar
 
-		@produto = Produto.find(params[:id])
+	 	@produto = Produto.find(params[:id])
 
 		@user.update_column(:saldo, @user.saldo - @produto.preco)
 

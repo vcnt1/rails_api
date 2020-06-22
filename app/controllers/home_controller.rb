@@ -1,9 +1,6 @@
 class HomeController < ApplicationController
 	def index
-		if User.exists?(1) 
-			@user = User.find(1)
-		end
-
+		@user = User.exists?(1) ? User.find(1) : nil
 		@produtos = Produto.all
 	end
 
