@@ -24,12 +24,12 @@ default: &default
 development:
   adapter: postgresql
   database: mydb_test
-  username: Administrator # replace this with your own user name
-  password: admin1234 # replace this with your own password
-  host: localhost
-  encoding: UTF8
-  pool: 5
-  timeout: 5000
+  #username: Administrator # replace this with your own user name
+  #password: admin1234 # replace this with your own password
+  #host: localhost
+  #encoding: UTF8
+  #pool: 5
+  #timeout: 5000
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
